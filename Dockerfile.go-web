@@ -1,0 +1,11 @@
+FROM golang:bullseye
+
+WORKDIR /app
+
+COPY . .
+
+EXPOSE 8000
+
+RUN go build 2.go-web/main.go
+
+CMD ["./main"]
